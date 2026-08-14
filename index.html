@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>سمسار يونس للدواجن والطيور</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f6f7;color:#222}
+header{background:#168447;color:white;padding:20px 15px;text-align:center}
+header h1{margin:0;font-size:25px}
+header p{margin:8px 0 0}
+nav{background:white;padding:10px;display:flex;gap:7px;overflow:auto;position:sticky;top:0;z-index:5}
+nav button{border:0;background:#eee;padding:11px 14px;border-radius:20px;white-space:nowrap}
+.container{max-width:700px;margin:auto;padding:15px}
+.hero{background:white;border-radius:15px;padding:20px;text-align:center;margin-bottom:15px}
+.hero h2{margin-top:0}
+.mainbtn{display:block;background:#168447;color:white;text-decoration:none;padding:14px;border-radius:10px;margin:8px 0;font-weight:bold}
+.card{background:white;border-radius:14px;padding:16px;margin:12px 0;box-shadow:0 2px 8px #0001}
+.badge{display:inline-block;padding:6px 10px;border-radius:15px;background:#dff5e8;color:#08783d;font-size:13px}
+.old{background:#eee;color:#555}
+.row{display:flex;justify-content:space-between;border-bottom:1px solid #eee;padding:9px 0}
+.price{font-size:20px;font-weight:bold}
+section{display:none}
+section.active{display:block}
+footer{background:#222;color:white;text-align:center;padding:25px;margin-top:30px}
+input,select,textarea{width:100%;padding:12px;margin:6px 0 12px;border:1px solid #ddd;border-radius:9px}
+.submit{width:100%;border:0;background:#168447;color:white;padding:14px;border-radius:9px;font-size:17px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🐔 سمسار يونس للدواجن والطيور</h1>
+<p>حلقة الوصل بين صاحب المزرعة والتاجر</p>
+</header>
+
+<nav>
+<button onclick="show('home')">الرئيسية</button>
+<button onclick="show('sales')">عروض البيع</button>
+<button onclick="show('orders')">طلبات الشراء</button>
+<button onclick="show('old')">صفقات سابقة</button>
+<button onclick="show('about')">عن الموقع</button>
+</nav>
+
+<div class="container">
+
+<section id="home" class="active">
+<div class="hero">
+<h2>أهلاً بيك 👋</h2>
+<p>عندك طيور للبيع؟ أو بتدور على كمية للشراء؟</p>
+<a class="mainbtn" href="#form">🐔 عندي طيور للبيع</a>
+<a class="mainbtn" href="#form">🛒 عايز أشتري طيور</a>
+</div>
+
+<div class="card">
+<h3>📢 عروض البيع الحالية</h3>
+<p>شوف الطيور المتاحة للبيع حاليًا.</p>
+<button class="mainbtn" onclick="show('sales')">شوف العروض</button>
+</div>
+
+<div class="card">
+<h3>🛒 طلبات الشراء</h3>
+<p>شوف التجار اللي بيدوروا على طيور.</p>
+<button class="mainbtn" onclick="show('orders')">شوف الطلبات</button>
+</div>
+</section>
+
+<section id="sales">
+<h2>🟢 عروض البيع الآن</h2>
+
+<div class="card">
+<span class="badge">متاح للبيع الآن</span>
+<h3>🐔 تسمين أبيض</h3>
+<div class="row"><span>الكمية</span><b>5,000 طائر</b></div>
+<div class="row"><span>الوزن</span><b>2 – 2.3 كيلو</b></div>
+<div class="row"><span>المحافظة</span><b>القليوبية</b></div>
+<div class="row"><span>السعر</span><b class="price">حسب الاتفاق</b></div>
+<p>📅 العرض بتاريخ: 14 أغسطس 2026</p>
+<a class="mainbtn" href="tel:01503380115">📞 كلم سمسار يونس</a>
+</div>
+
+<div class="card">
+<span class="badge">متاح للبيع الآن</span>
+<h3>🐔 بلدي</h3>
+<div class="row"><span>الكمية</span><b>1,500 طائر</b></div>
+<div class="row"><span>المحافظة</span><b>المنوفية</b></div>
+<div class="row"><span>السعر</span><b>حسب الاتفاق</b></div>
+<a class="mainbtn" href="tel:01503380115">📞 كلم سمسار يونس</a>
+</div>
+</section>
+
+<section id="orders">
+<h2>🔵 طلبات الشراء الحالية</h2>
+
+<div class="card">
+<span class="badge">طلب شراء حالي</span>
+<h3>🛒 مطلوب تسمين أبيض</h3>
+<div class="row"><span>الكمية المطلوبة</span><b>4,000 طائر</b></div>
+<div class="row"><span>الوزن</span><b>2 – 2.5 كيلو</b></div>
+<div class="row"><span>المحافظة</span><b>القليوبية</b></div>
+<p>📅 مطلوب خلال 3 أيام</p>
+<a class="mainbtn" href="tel:01503380115">📞 كلم سمسار يونس</a>
+</div>
+</section>
+
+<section id="old">
+<h2>⚫ صفقات سابقة — تمت</h2>
+<p>العروض القديمة واضحة ومنفصلة عن العروض الموجودة حاليًا.</p>
+
+<div class="card">
+<span class="badge old">صفقة سابقة — تمت</span>
+<h3>🐔 تسمين أبيض</h3>
+<div class="row"><span>الكمية</span><b>6,000 طائر</b></div>
+<div class="row"><span>الوزن</span><b>2.3 كيلو</b></div>
+<div class="row"><span>المحافظة</span><b>المنوفية</b></div>
+<p>📅 تاريخ الصفقة: 5 أغسطس 2023</p>
+<p>✅ تمت عن طريق سمسار يونس</p>
+</div>
+
+<div class="card">
+<span class="badge old">صفقة سابقة — تمت</span>
+<h3>🐔 بلدي</h3>
+<div class="row"><span>الكمية</span><b>2,000 طائر</b></div>
+<div class="row"><span>المحافظة</span><b>الدقهلية</b></div>
+<p>📅 تاريخ الصفقة: 12 سبتمبر 2023</p>
+<p>✅ تمت عن طريق سمسار يونس</p>
+</div>
+</section>
+
+<section id="form">
+<h2>📝 ابعت عرض أو طلب</h2>
+
+<div class="card">
+<label>أنا:</label>
+<select>
+<option>صاحب مزرعة - عندي طيور للبيع</option>
+<option>تاجر - عايز أشتري طيور</option>
+</select>
+
+<label>نوع الطيور</label>
+<select>
+<option>تسمين</option>
+<option>بلدي</option>
+<option>بط</option>
+<option>رومي</option>
+<option>حمام</option>
+<option>أرانب</option>
+<option>أنواع أخرى</option>
+</select>
+
+<label>الكمية</label>
+<input type="number" placeholder="مثلاً 5000">
+
+<label>الوزن</label>
+<input placeholder="مثلاً 2 - 2.3 كيلو">
+
+<label>المحافظة</label>
+<select>
+<option>القاهرة</option>
+<option>القليوبية</option>
+<option>الجيزة</option>
+<option>المنوفية</option>
+<option>الدقهلية</option>
+<option>الشرقية</option>
+<option>الغربية</option>
+<option>البحيرة</option>
+<option>الإسكندرية</option>
+<option>كفر الشيخ</option>
+<option>الباقي من المحافظات</option>
+</select>
+
+<label>ملاحظات</label>
+<textarea rows="4" placeholder="اكتب أي تفاصيل مهمة"></textarea>
+
+<button class="submit" onclick="alert('تم تجهيز الطلب. للتأكيد والتنسيق كلم سمسار يونس على 01503380115')">
+إرسال الطلب
+</button>
+</div>
+</section>
+
+<section id="about">
+<h2>👤 مين هو سمسار يونس؟</h2>
+
+<div class="card">
+<p>
+سمسار يونس للدواجن والطيور موقع بيجمع بين صاحب المزرعة
+اللي عايز يبيع والتاجر اللي عايز يشتري.
+</p>
+
+<p>
+إنت عندك طيور وعايز تبيع؟
+ابعتلنا نوع الطيور والكمية والوزن والمحافظة،
+وإحنا نعرضها على الموقع.
+</p>
+
+<p>
+إنت تاجر وبتدور على طيور؟
+ابعتلنا إنت محتاج كام طائر ونوعهم ووزنهم والمحافظة.
+</p>
+
+<h3>🔒 بياناتك</h3>
+<p>
+بيانات صاحب المزرعة والتاجر مش بتظهر للعامة.
+اللي بيظهر هو النوع والكمية والوزن والمحافظة فقط.
+</p>
+
+<h3>📞 التواصل</h3>
+<p><b>01503380115</b></p>
+</div>
+
+<div class="card">
+<h3>📜 طريقة التعامل</h3>
+<p>إحنا حلقة الوصل بين البائع والمشتري.</p>
+<p>العروض الحالية مكتوب عليها: <b>متاح للبيع الآن</b>.</p>
+<p>والصفقات القديمة مكتوب عليها: <b>صفقة سابقة — تمت</b>.</p>
+<p>السعر النهائي وميعاد التسليم بيتم الاتفاق عليهم حسب كل صفقة.</p>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>🐔 سمسار يونس للدواجن والطيور</p>
+<p>للتواصل: 01503380115</p>
+<p>© 2026</p>
+</footer>
+
+<script>
+function show(id){
+document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
